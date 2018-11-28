@@ -1,0 +1,19 @@
+.btn
+	display: inline-block
+	height: 55px
+	width: 240px
+	line-height: 55px
+	border-radius: 28px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	&--primary 
+		@include gradientColor
+		color: $color-tertiary
+	&--secondary
+		border: 1px solid #0058A5;
+		color: $color-primary
+
+	&.look-all
+		margin-top: 10px
+	

@@ -1,0 +1,60 @@
+.nav
+    margin-top: 20px
+    display: none
+    
+    .navigation-items
+        ul
+            counter-reset: menu-counter
+        li
+            float: left
+            padding: 20px 40px 20px 0
+            position: relative
+
+            &::before
+                counter-increment: menu-counter
+                content: counter(menu-counter, decimal-leading-zero)
+                font-family: $font-tertiary
+                color: #DEDEDE
+                letter-spacing: 0
+                line-height: 24px
+                position: absolute
+                top: 20px
+                left: 0
+            
+            &:hover, &.active
+                &::before
+                    color: $color-secondary
+                
+                &::after 
+                    content: ""
+                    background: $color-secondary
+                    width: 40px
+                    height: 2px
+                    position: absolute
+                    left: 30px
+                    top: 30px
+                
+                .navigation-items--item
+                    .title
+                        color: $color-secondary
+
+
+        &--item
+            display: inline-block
+            padding-top: 40px
+
+            .title
+                font-size: 24px
+                color: #323232
+                line-height: 32px
+                font-family: $font-tertiary
+            
+            .text
+                font-family: $font-secondary
+                line-height: 20px
+    
+    &--image
+        margin-top: 25px
+
+        img
+            width: 100%

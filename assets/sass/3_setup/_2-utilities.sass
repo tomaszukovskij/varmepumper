@@ -1,0 +1,85 @@
+body
+  background: #F8F8F8
+  font-family: $font-primary
+ul
+  list-style-type: none
+  margin: 0
+// element floats and positioning
+.fl-left
+  float: left
+.fl-right
+  float: right !important
+.fl-center
+  margin-left: auto
+  margin-right: auto
+.fl-none
+  float: none
+.va-center
+  position: relative
+  top: 50%
+  transform: translatey(-50%)
+
+// element text align
+.ta-left
+  text-align: left
+.ta-center
+  text-align: center
+.ta-right
+  text-align: right
+
+// float clear classes
+.clear
+  clear: both
+.clearfix
+  &:before, &:after
+    content: ''
+    display: table
+  &:after
+    clear: both
+
+// Page container
+#page-container
+  overflow: hidden
+  padding-top: 100px
+
+// Main
+main
+  padding-bottom: 60px
+
+// Image box
+.img-box
+  overflow: hidden
+  img
+    display: block
+    max-width: 100%
+  &.img-box--full
+    img
+      width: 100%
+
+// Text box
+.text-box
+  overflow: hidden
+  >*
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+  // wrap element into block
+.wrap-block
+  display: block
+  
+  // Back element
+  
+.go-back
+    font-family: $font-secondary
+    font-size: 16px
+    color: #797979
+    line-height: 32px
+    text-decoration: underline
+  
+.checked
+  width: 15px
+  height: 15px
+  display: inline-block
+  @include backgroundC("../img/icons/checked.svg")

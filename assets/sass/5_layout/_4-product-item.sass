@@ -1,0 +1,71 @@
+.product-item
+    background: #fff
+    cursor: pointer
+    display: inline-block
+    width: 100%
+    margin: 20px 0
+    
+    &:hover 
+        @include gradientColor
+        color: $color-tertiary
+
+    &--image 
+        height: 240px
+        width: 100%
+        display: block
+
+    &--title
+        height: 110px
+        padding: 15px 25px
+        position: relative
+
+        &::after 
+            content: ""
+            width: 100%
+            height: 4px
+            @include gradientColor
+            position: absolute
+            bottom: 0
+            left: 0
+        
+        &::before
+            content: ""
+            width: 24px
+            height: 24px
+            @include backgroundC("../img/icons/arrow-forward.svg")
+            position: absolute
+            top: 50%
+            right: 28px
+            @include transformTop
+
+        .category &
+            height: 55px
+            text-align: center
+
+        &__heading 
+            font-weight: 600
+            font-size: 24px
+            line-height: 32px
+            display: inline-block
+            width: 100%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            width: 80%
+
+            .homepage-items &
+                font-weight: 400
+                line-height: 26px
+        
+        &__text
+            font-family: $font-secondary
+            height: 40px
+            line-height: 20px
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            margin: 0;
+
+.homepage-items
+    padding-top: 60px

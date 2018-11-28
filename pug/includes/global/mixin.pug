@@ -1,0 +1,14 @@
+mixin product-item(grid, heading, title)
+    div(class= grid)
+        a.product-item(href="javascript:vpod(0)")
+            .product-item--image(style="background: url('../assets/img/products/product1.jpg') top center no-repeat; background-size: cover;")
+            .product-item--title
+                span.product-item--title__heading= heading
+                p.product-item--title__text= title
+
+mixin product-item-category(grid, heading)
+    div(class= grid)
+        a.product-item.category(href="javascript:vpod(0)")
+            .product-item--image(style="background: url('../assets/img/products/product1.jpg') top center no-repeat; background-size: cover;")
+            .product-item--title
+                span.product-item--title__heading= heading
